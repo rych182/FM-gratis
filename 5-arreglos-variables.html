@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de arreglos</title>
+</head>
+<body>
+	
+
+	<script>
+		var amigos = ["Sutano", "Perengano", "Imadesca"];
+		document.write("Tienes " + amigos.length + "amigos");
+		document.write("<br>");
+		document.write("Aquí, agregare un amigo, tomando como valor el numero de amigos que tengo, utilizando amigos[amigos.length] = 'Fernando'; y me dirá que tengo 4 amigos" + "<br>");
+		amigos[amigos.length] = "Fernando";
+		document.write("Tienes " + amigos.length + " amigos" + "<br>");
+		document.write("Ahora agregaré otro amigo." + "<br>");
+		amigos[amigos.length] = "Pepito";
+		document.write("Tienes " + amigos.length + " amigos" + "<br>");
+		document.write("Ahora agregaré varios amigos de golpe utilizando el metodo 'push'." + "<br>");
+		amigos.push("Alejandro","Oscar","Veronica");
+		document.write("Tienes "+ amigos.length + " amigos" + "<br>");
+		document.write("Para agregar datos al arreglo, debo usarlo así <b> amigos.push('Alejandro','Oscar','Veronica'); </b>" + "<br>");
+
+		document.write("Estos son mis amigos: " + "<br>" + amigos + "<br><br>");
+
+		document.write("Ahora bien, se puede eliminar al ultimo amigo con el metodo <b>POP</b>, veamoslo.");
+		amigos.pop();
+		document.write("<b>" + amigos + "</b>"+ "<br>" + " Ahora ya no aparece Veronica" + "<br>");
+		document.write("Ahora vamos a imprimir 7 bloques del array, que era los que teníamos, ya no existe Veronica, veamos que sucede"+ "<br>");
+		document.write(amigos[0] + " ," + amigos[1] + " ," + amigos[2] + " ," + amigos[3] + " ," + amigos[4] + " ," + amigos[5] + " ," + amigos[6] + " ," + amigos[7] + " ," + amigos[8] + "<br>");
+		document.write("Si te fijas, marca <b>undifened</b>, debido a que borramos ese valor" + "<br>");
+		document.write("Ahora voy a concatenar 2 arreglos, con el metodo <b>concat</b><br>");
+
+		var ciudades = ["Orizaba","Colima","Hermosillo","Cuauhtemoc"];
+		var arreglos = amigos.concat(ciudades);
+		document.write(arreglos + "<br>");
+		document.write("También se puede concatenar dos arreglos que ya estén concatenados <br>");
+
+		var ciudadesFeas = ["Oaxaca","Izucar"];
+		var ciudadesFeas2 = ["Iguala", "Acapulco"];
+		var ciudadesFeas3 = ciudadesFeas.concat(ciudadesFeas2);
+		document.write("Estos son mis amigos y las ciudades que me gustan: " + "<b>" + arreglos + "</b> " + "<br>" + "y estas son las ciudades que no me gustan: " + ciudadesFeas3+ "<br><br>");
+
+		document.write("También puedes separar las cosas con el metodo <b>join</b>, separare unos arreglos con un guión.<br>");
+		document.write(ciudadesFeas3.join("-") + "<br>");
+		document.write("Aunque lo ideal para utilizar <b>join</b> es meterlo dentro de una variable y al imprimir, solo imprimes esa variables<br>");
+		var ciudadesFeas4 = ciudadesFeas3.join("<i><b> ORALE!! </b></i>");
+		document.write(ciudadesFeas4 + "<br>");
+		document.write("Al experimentar, note que se pueden poner etiquetas html en el metodo join, se ve cool<br><br>");
+
+		document.write("También se puede imprimir los arreglos de manera ordenada, me refiero a que estén ordenados alfabeticamente, esto se hace con el metodo <b>sort</b><br>");
+		document.write(ciudades.sort() + "<br>" + "<b>" + ciudadesFeas3.sort() + "</b>"+ "<br>");
+		document.write("Y También puedes imprimirlo al reves con el metodo <b> reverse</b>. <br>");
+		document.write("<b>"+ ciudadesFeas3.reverse() + "</b>");
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
