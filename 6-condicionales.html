@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicionales con Javascript</title>
+</head>
+<body>
+	<script>
+		/*EXPLICACIÓN DE LAS CONDICIONALES
+			if(condicional, <,>, !=, ==, ===, etc){
+				instrucciones
+			}else{
+				instrcciones
+			}
+		*/
+
+		var edad = 16,
+			nombre = "Perengano",
+			dinero = 20000,
+			genero = "pez",
+			school = "libertario";
+		if (edad >= 18) {
+			document.write("Pasele Don " + nombre + "<br>");
+		}else{
+			document.write("Saquese alv chamaco, aún estás muy morro x'D <br><br>");
+		}
+
+		/*PREGUNTAR DOS VECES, utilizas else if*/
+		if (edad >= 18){
+			document.write("Puedes pasar Don " + nombre + "<br><br>");
+		}else if (dinero >= 500){
+			document.write("Saca el Ignacio Zaragoza y pasale chavo." + "<br><br>");
+		}else{
+			document.write("No chavo!!, estas chamaco para entrar al bar abrace alv" + "<br><br>");
+		}
+
+		//Hacer un ejercicio que utilice != (distinto que)
+			if (genero == "masculino") {
+			document.write("Eres hombre<br><br>");
+		} else if(genero == "mujer" ){
+			document.write("Eres mujer<br><br>");
+		}else if(genero != "mujer" && "hombre"){
+			document.write("Eres un genero raro<br><br>");
+		}
+	
+		//Ejercicio utilizando && y ||
+
+		if (school == "keynes"){
+			document.write("Eres un kernesiano");
+		}else if (school == "socialista"){
+			document.write("Eres chairo");
+		}else if (school == "socialista" && dinero > 18000 ){
+			document.write("Eres un chairo caviar");
+		}else if (school != "keynes" || "socialista"){
+			document.write("Eres libertario o no sabes nada de economía");
+		}
+			
+		/*Para preguntarle a la compu si un valor 
+			if( nombre){
+				document.write("OK");
+			}
+			Lo que hara la compu es checar si la variable tiene un valor y si lo tiene, imprimira lo que le hayas puesto.
+		*/	
+	</script>
+</body>
+</html>
