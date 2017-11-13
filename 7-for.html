@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio con For en JavaScript.</title>
+</head>
+<body>
+	<script>
+		amigos = ["Carmen","Nayeli","América","Amiuzca"];
+		for (amigo in amigos) {
+			document.write("Mi amiga es:" + amigos[amigo] + "<br>");
+		}
+
+// 1++ es lo mismo que i = i + 1
+//Prueba con i = i +2  
+		var numero = 20;
+		for (var a = 0; a <= numero ; a = a + 2) {
+			document.write(a + "<br>");
+		}
+
+//probando descendente de 2 en 2
+
+	for (var i = 40; i >= numero; i = i - 2) {
+		document.write( i + "<br>");
+	}
+
+//Probando multiplicando de el numero por si mismo
+
+	var numeroA = 100;
+	for (var i = 1; i <= numeroA ; i = i * 2) {
+		document.write(i + "<br>");
+	}
+
+//Probando ir contando de 4 en 4
+var numeroB = 100;
+for (var i = 1; i <= numeroB; i++) {
+	if (i == 26) {
+	 break;
+	}
+	document.write(i * 4 + "<br>");
+}
+
+//probando resta al metodo length
+var dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+	for (var i = 0; i < dias.length -2; i++) {
+		document.write(dias[i] + "<br>" ); 
+	}
+
+	</script>
+
+
+</body>
+</html>
